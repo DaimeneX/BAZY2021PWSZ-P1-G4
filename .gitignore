@@ -1,3 +1,5 @@
 *.exe
 *.o
 /.vscode
+licenses.licx
+App_Licenses.dll
