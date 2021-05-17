@@ -45,8 +45,10 @@
             </div>
         </div>
 
-        <asp:SiteMapDataSource ID="SiteMapDataSourceDBS" runat="server" ShowStartingNode="true" SiteMapProvider="zligsitemap" />
+        <asp:SiteMapDataSource ID="SiteMapDataSourceDBS" runat="server" ShowStartingNode="false" SiteMapProvider="zligsitemap" />
+        <div style="height:40px;">
 
+        </div>
         <asp:ContentPlaceHolder id="MasterPageBody" runat="server">
         <!--Zawartość strony-->
         </asp:ContentPlaceHolder>

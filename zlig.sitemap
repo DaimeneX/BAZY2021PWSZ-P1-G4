@@ -1,4 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-  <siteMapNode url="~/Default.aspx" title="Start"  description="Strona główna" />
+  <siteMapNode url="~/"   description="Root" title="Root">
+    
+    <siteMapNode url="~/Default.aspx" title="Start"  description="Strona główna" />
+
+    <siteMapNode url="~/Liga/Liga.aspx" title="Liga" description="Liga" >
+      <siteMapNode url="~/Liga/Przeglad.aspx" title="Przeglad" />
+      <siteMapNode url="~/Liga/Kluby.aspx" title="Kluby" />
+      <siteMapNode url="~/Liga/Zawodnicy.aspx" title="Zawodnicy" />
+    </siteMapNode>
+
+    <siteMapNode url="~/Mecze/Mecze.aspx" title="Mecze" description="Mecze ligi" >
+      <siteMapNode url="~/Mecze/Historia.aspx" title="Historia meczy" />
+      <siteMapNode url="~/Mecze/Przyszle.aspx" title="Przyszłe mecze" />
+    </siteMapNode>
+
+    <siteMapNode url="~/Finanse/Finanse.aspx" title="Finanse" description="Finanse ligi" >
+      <siteMapNode url="~/Finanse/Zarzadzanie.aspx" title="Zarządzanie" />
+    </siteMapNode>
+    
+    <siteMapNode url="~/System/System.aspx" title="System"  description="System">
+      <siteMapNode url="~/System/Uzytkownicy/Uzytkownicy.aspx" title="Użytkownicy" description="Użytkownicy" />
+    </siteMapNode>
+  
+  </siteMapNode>
 </siteMap>

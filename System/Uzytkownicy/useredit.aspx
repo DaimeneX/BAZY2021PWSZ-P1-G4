@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/MasterPages/MasterPage.master"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/MasterPage/MasterPage.master"%>
 <%@ Register assembly="DevExpress.Web.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
 
 <%@ Register assembly="DevExpress.Web.v20.1, Version=20.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
@@ -134,7 +134,7 @@
     }        
 </script>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderContent1" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MasterPageBody" Runat="Server">
 
 <dx:ASPxRoundPanel ID="ASPxRoundPanel1" runat="server" 
                      HeaderText="Edycja danych użytkownika" Width="800px">
