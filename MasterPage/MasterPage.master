@@ -4,6 +4,7 @@
 
 <html>
 <head runat="server">
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
     <title>Z-Liga</title>
     <script type="text/javascript">
         function disableEnterKey(e) {
@@ -16,43 +17,44 @@
             return (key != 13);
         }
     </script>
-    <asp:ContentPlaceHolder id="MasterPageHead" runat="server">
+    <style>
+    </style>
+    <asp:ContentPlaceHolder ID="MasterPageHead" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div style="width: 1180px; margin:auto;">
-        <div style="width: 1180px; height: 17px; background-color: #F5FFFF; border-bottom-color: #689398; border-bottom: thin;">
-            <div style="float: right; vertical-align: text-bottom; width: 250px; text-align: right;">
-                <asp:LoginStatus ID="LoginStatus" runat="server" Font-Size="Small" />
-            </div>
-            <div style="float: right; vertical-align: bottom; width: 250px; text-align: right;">
-                <asp:LoginName ID="LoginName" runat="server" Font-Bold="True" Font-Names="Calibri" Font-Size="Small" />
-            </div>
-        </div>
-        <div id="TOPLinki" style="width: 1180px; height: 38px; padding-top: 7px; padding-bottom: 3px; border-bottom: solid; border-color: Orange; vertical-align: bottom;" runat="server">        
-            <div>
-                <div style="float: left;"> 
-                    <dx:ASPxImage ID="zliga_logo" runat="server" ShowLoadingImage="true" ImageUrl="~/favicon.ico" Height="16px"></dx:ASPxImage>
+    <div style="width: 1180px; margin: auto;">
+        <form id="form1" runat="server">
+            <div style="width: 1180px; height: 17px; background-color: #F5FFFF; border-bottom-color: #689398; border-bottom: thin;">
+                <div style="float: right; vertical-align: text-bottom; width: 250px; text-align: right;">
+                    <asp:LoginStatus ID="LoginStatus" runat="server" Font-Size="Small" />
                 </div>
-                <div style="float: left; padding-left:4px;">   
-                    <dx:ASPxLabel ID="lbHeader" runat="server" Text="HEADER" ForeColor="#3395dd" Font-Size="Large" Font-Bold="true" />
-                </div>
-                <div style="float: right;">
-                    <dx:ASPxMenu ID="PasekLinkow" DataSourceID="SiteMapDataSourceDBS" AutoSeparators="RootOnly" runat="server" AutoPostBack="true"
-                        OnItemClick="PasekLinkow_ItemClick" OnItemDataBound="PasekLinkow_ItemDataBound" AllowSelectItem="true" />
+                <div style="float: right; vertical-align: bottom; width: 250px; text-align: right;">
+                    <asp:LoginName ID="LoginName" runat="server" Font-Bold="True" Font-Names="Calibri" Font-Size="Small" />
                 </div>
             </div>
-        </div>
+            <div id="TOPLinki" style="width: 1180px; height: 24px; padding-top: 7px; padding-bottom: 3px; border-bottom: solid; border-color: Orange; vertical-align: bottom;" runat="server">
+                <div>
+                    <div style="float: left;">
+                        <dx:ASPxImage ID="zliga_logo" runat="server" ShowLoadingImage="true" ImageUrl="~/favicon.ico" Height="24px"></dx:ASPxImage>
+                    </div>
+                    <div style="float: left; padding-left: 4px;">
+                        <dx:ASPxLabel ID="lbHeader" runat="server" Text="HEADER" ForeColor="#3395dd" Font-Size="Large" Font-Bold="true" />
+                    </div>
+                    <div style="float: right;">
+                        <dx:ASPxMenu ID="PasekLinkow" DataSourceID="SiteMapDataSourceDBS" AutoSeparators="RootOnly" runat="server" AutoPostBack="true"
+                            OnItemClick="PasekLinkow_ItemClick" OnItemDataBound="PasekLinkow_ItemDataBound" AllowSelectItem="true" />
+                    </div>
+                </div>
+            </div>
 
-        <asp:SiteMapDataSource ID="SiteMapDataSourceDBS" runat="server" ShowStartingNode="false" SiteMapProvider="zligsitemap" />
-        <div style="height:40px;">
-
-        </div>
-        <asp:ContentPlaceHolder id="MasterPageBody" runat="server">
-        <!--Zawartość strony-->
-        </asp:ContentPlaceHolder>
+            <asp:SiteMapDataSource ID="SiteMapDataSourceDBS" runat="server" ShowStartingNode="false" SiteMapProvider="zligsitemap" />
+            <div style="height: 40px;">
+            </div>
+            <asp:ContentPlaceHolder ID="MasterPageBody" runat="server">
+                <!--Zawartość strony-->
+            </asp:ContentPlaceHolder>
+        </form>
     </div>
-    </form>
 </body>
 </html>
